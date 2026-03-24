@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Barlow+Condensed:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--ink:   #0e0d0b;
+	--paper: #f4f0e8;
+	--sand:  #e8e0cc;
+	--rule:  #c8bfa8;
+	--gold:  #b8960c;
+	--ember: #c44a1a;
+	--deep:  #1a2035;
+}
+
+html {
+	background: var(--paper);
+	color: var(--ink);
+	font-family: 'Cormorant Garamond', Georgia, serif;
+	font-size: 18px;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--paper);
+	min-height: 100vh;
+	position: relative;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+	pointer-events: none;
+	z-index: 0;
+	opacity: 0.5;
+}
+
+.font-cond {
+	font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+
+.font-mono-ktc {
+	font-family: 'IBM Plex Mono', monospace;
+}
